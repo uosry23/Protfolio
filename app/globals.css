@@ -1,0 +1,284 @@
+@import 'tailwindcss';
+
+/* ═══════════════════════════════════════════════════════════
+   Design tokens — palette derived from the YA emblem
+   (deep navy base, electric blue, bright cyan accent)
+   ═══════════════════════════════════════════════════════════ */
+@theme {
+  --color-bg: #050a1f;
+  --color-bg-deep: #020512;
+  --color-ink: #e8f1ff;
+  --color-accent-1: #10bdf5;
+  --color-accent-2: #7ad9ff;
+  --color-accent-3: #1b3fd6;
+  --color-line: #e8f1ff26;
+  --color-muted: #e8f1ff8c;
+  --color-red-300: #ffa3a3;
+  --color-red-400: #ff6568;
+
+  --font-display: var(--font-anton), Impact, 'Arial Narrow', sans-serif;
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Fallback faces with metric overrides — identical to the
+   reference site, so the layout never shifts while the
+   webfont loads.
+   ═══════════════════════════════════════════════════════════ */
+@font-face {
+  font-family: 'Anton Fallback';
+  src: local('Arial');
+  ascent-override: 129.7%;
+  descent-override: 36.29%;
+  line-gap-override: 0%;
+  size-adjust: 90.69%;
+}
+
+@font-face {
+  font-family: 'Inter Tight Fallback';
+  src: local('Arial');
+  ascent-override: 100.51%;
+  descent-override: 25.03%;
+  line-gap-override: 0%;
+  size-adjust: 96.39%;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Base
+   ═══════════════════════════════════════════════════════════ */
+@layer base {
+  *,
+  *::after,
+  *::before,
+  ::backdrop {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--color-bg);
+    color-scheme: dark;
+    overflow-x: clip;
+    scroll-behavior: auto !important;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100dvh;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-accent-1);
+    color: var(--color-bg-deep);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent-1);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Custom cursor hides the native one (desktop only, toggled by JS). */
+  html.custom-cursor,
+  html.custom-cursor a,
+  html.custom-cursor button,
+  html.custom-cursor label {
+    cursor: none;
+  }
+
+  /* Prevent iOS rubber-band scrolling fighting with Lenis */
+  body.lenis-stopped {
+    overflow: hidden;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    display: block;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-ink);
+    -webkit-box-shadow: 0 0 0 1000px var(--color-bg-deep) inset;
+    caret-color: var(--color-ink);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Utilities & component classes
+   ═══════════════════════════════════════════════════════════ */
+@layer components {
+  /* Grain / noise texture — two layered SVG turbulence tiles */
+  .grain::before,
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Content sits above the grain so the texture never muddies the type. */
+  .grain > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .grain::before {
+    opacity: 0.9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .grain::after {
+    opacity: 0.6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n2)' opacity='0.25'/%3E%3C/svg%3E");
+  }
+
+  /* Fluid type helper for the giant display headlines */
+  .text-hero-size {
+    font-size: clamp(3.2rem, 13.5vw, 15rem);
+    line-height: 0.86;
+  }
+
+  .text-display-xl {
+    font-size: clamp(2.4rem, 7vw, 6.5rem);
+    line-height: 0.92;
+  }
+
+  .text-display-lg {
+    font-size: clamp(1.9rem, 4.6vw, 4rem);
+    line-height: 0.98;
+  }
+
+  /* Link with an underline that wipes in from the left */
+  .nav-line {
+    position: relative;
+  }
+
+  .nav-line::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  /* Cards */
+  .card-line {
+    border: 1px solid var(--color-line);
+  }
+
+  /* Glass surface used by the sticky header */
+  .glass {
+    background: color-mix(in oklab, var(--color-bg) 75%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Text with a hollow (stroked) look — used in the tech marquee */
+  .text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-ink);
+  }
+
+  /* Screen-reader-only helper (kept for Tailwind parity) */
+  .sr-only-focusable:not(:focus):not(:focus-within) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Keyframes
+   ═══════════════════════════════════════════════════════════ */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 160% 0;
+  }
+  to {
+    background-position: -60% 0;
+  }
+}
+
+@layer utilities {
+  .animate-float-y {
+    animation: float-y 3s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
+  .will-change-transform {
+    will-change: transform;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Reduced motion — kill every decorative animation
+   ═══════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .grain::before,
+  .grain::after {
+    display: none;
+  }
+}

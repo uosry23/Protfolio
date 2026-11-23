@@ -1,0 +1,26 @@
+'use client';
+
+import Link from 'next/link';
+
+import { useSiteContext } from '@/lib/content-context';
+
+export default function NotFound() {
+  const site = useSiteContext();
+  const copy = site?.copy.system;
+
+  return (
+    <div className="flex min-h-[70svh] flex-col items-center justify-center px-6 text-center">
+      <p className="font-display text-[22vw] leading-none text-ink/10 md:text-[12rem]">404</p>
+      <h1 className="-mt-6 font-display text-2xl uppercase text-ink md:text-3xl">
+        {copy?.notFoundTitle ?? 'This page slipped away'}
+      </h1>
+      <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">{copy?.notFoundBody}</p>
+      <Link
+        href="/"
+        className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent-1 px-6 py-3 text-sm uppercase tracking-[0.18em] text-bg-deep"
+      >
+        {copy?.notFoundBackHome ?? 'Back home'} <span aria-hidden="true">↗</span>
+      </Link>
+    </div>
+  );
+}

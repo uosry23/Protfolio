@@ -1,0 +1,495 @@
+{
+  "settings": {
+    "siteName": "Yousry Ahmed",
+    "ownerName": "Yousry Ahmed",
+    "role": "Full-Stack Web Developer",
+    "heroEyebrow": "Web Developer",
+    "heroHeadlineTop": "Full-Stack Web Development",
+    "heroHeadlineBottom": "Websites & Systems That Sell.",
+    "heroIntro": "I design and build complete web products — from the interface to the database. React and Next.js on the front, Firebase and Supabase behind it, plus the APIs, CRMs and internal systems that keep a business running.",
+    "aboutStatement": "I build web products that work as hard as you do.",
+    "aboutBio": [
+      "I'm Yousry — a full-stack developer who builds websites and the systems behind them for businesses that want more than a pretty page.",
+      "My core is the web platform itself: fast, accessible, SEO-ready interfaces written by hand — no bloated templates, no page builders. React and Next.js on the front, Firebase and Supabase on the back, with auth, storage and realtime wired up properly.",
+      "On top of that I build the unglamorous things that actually run a company: CRMs, dashboards, admin panels and custom internal systems that replace spreadsheets and disconnected tools — so a business can move from idea to working product without the guesswork."
+    ],
+    "aboutPhoto": "/images/about.webp",
+    "aboutCaption": "Yousry Ahmed — Full-Stack Studio",
+    "tech": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Firebase",
+      "Supabase",
+      "Node.js",
+      "PostgreSQL",
+      "Tailwind",
+      "Git"
+    ],
+    "whatsappNumber": "201013774006",
+    "email": "hello@yousryahmed.dev",
+    "consultationPrice": 50,
+    "consultationDuration": "60 minutes · one-to-one call",
+    "socials": [
+      {
+        "label": "WhatsApp",
+        "href": "https://wa.me/201013774006"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://linkedin.com/in/"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/"
+      }
+    ],
+    "navLinks": [
+      {
+        "label": "Work",
+        "href": "#work"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Services",
+        "href": "#services"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "countries": [
+      {
+        "code": "SA",
+        "dial": "+966",
+        "label": "Saudi Arabia"
+      },
+      {
+        "code": "AE",
+        "dial": "+971",
+        "label": "United Arab Emirates"
+      },
+      {
+        "code": "KW",
+        "dial": "+965",
+        "label": "Kuwait"
+      },
+      {
+        "code": "QA",
+        "dial": "+974",
+        "label": "Qatar"
+      },
+      {
+        "code": "BH",
+        "dial": "+973",
+        "label": "Bahrain"
+      },
+      {
+        "code": "OM",
+        "dial": "+968",
+        "label": "Oman"
+      },
+      {
+        "code": "EG",
+        "dial": "+20",
+        "label": "Egypt"
+      },
+      {
+        "code": "JO",
+        "dial": "+962",
+        "label": "Jordan"
+      },
+      {
+        "code": "UK",
+        "dial": "+44",
+        "label": "United Kingdom"
+      },
+      {
+        "code": "US",
+        "dial": "+1",
+        "label": "United States"
+      }
+    ],
+    "projectTypes": [
+      "Portfolio",
+      "E-commerce Store",
+      "Dashboard / CRM",
+      "Internal System",
+      "Custom Web App",
+      "Other"
+    ],
+    "budgets": [
+      "$100–250",
+      "$250–500",
+      "$500+"
+    ],
+    "udemyUrl": null
+  },
+  "copy": {
+    "seo": {
+      "title": "Yousry | Web Developer",
+      "description": "Full-stack web development for businesses across Saudi Arabia, the UAE and the Gulf — React & Next.js interfaces, Firebase and Supabase backends, CRM and custom internal systems built to load fast and sell.",
+      "keywords": [
+        "full stack developer",
+        "web development Saudi Arabia",
+        "web development UAE",
+        "web development Dubai",
+        "web development Riyadh",
+        "React developer",
+        "Next.js developer",
+        "Firebase developer",
+        "Supabase developer",
+        "CRM development",
+        "custom web app development"
+      ],
+      "ogTitle": "Full-Stack Web Development — Websites & Systems That Sell",
+      "ogDescription": "React & Next.js interfaces, Firebase and Supabase backends, CRM and custom business systems for companies across the Gulf.",
+      "knowsAbout": [
+        "React",
+        "Next.js",
+        "WordPress",
+        "PHP",
+        "E-commerce",
+        "Web performance"
+      ],
+      "areaServed": [
+        "Saudi Arabia",
+        "United Arab Emirates",
+        "Qatar",
+        "Kuwait",
+        "Bahrain",
+        "Oman"
+      ],
+      "availableLanguage": [
+        "en",
+        "ar"
+      ],
+      "priceRange": "$$"
+    },
+    "hero": {
+      "ctaPrimary": "Start a project",
+      "ctaSecondary": "WhatsApp"
+    },
+    "work": {
+      "title": "Some of My Projects",
+      "subtitle": "Online stores, booking platforms and brand sites — designed and built from scratch to look sharp, load fast and turn visitors into customers.",
+      "scrollHint": "Hover to scroll"
+    },
+    "about": {
+      "eyebrow": "(About)"
+    },
+    "course": {
+      "eyebrow": "(Client Stories)",
+      "title": "Straight from my clients",
+      "subtitle": "Real messages from the people I built for — from their first line of code to their first paying client.",
+      "ctaLabel": "Udemy course",
+      "source": "WhatsApp"
+    },
+    "services": {
+      "title": "What I build",
+      "subtitle": "Custom web design and development for businesses across Saudi Arabia, the UAE and the Gulf — from a single landing page to a full online store."
+    },
+    "consultation": {
+      "eyebrow": "(Consultation)",
+      "title": "Book a 1-hour strategy call",
+      "body": "Not sure where to start? In one focused hour we'll look at your idea or your current website, pick the right tech, and plan the next steps — so your budget goes where it actually moves the needle.",
+      "bullets": [
+        "Review of your idea or current website",
+        "Platform & tech advice — WordPress, React or a store",
+        "A clear, prioritised action plan you keep"
+      ]
+    },
+    "contact": {
+      "eyebrow": "(Contact)",
+      "title": "Let's build something that sells",
+      "intro": "Tell me about your project and I'll get back to you on WhatsApp. Prefer to talk right away?",
+      "details": [
+        {
+          "label": "Based in",
+          "value": "Egypt · working worldwide"
+        },
+        {
+          "label": "Response time",
+          "value": "Within a few hours"
+        },
+        {
+          "label": "Availability",
+          "value": "Taking new projects"
+        }
+      ]
+    },
+    "footer": {
+      "description": "Custom web design & development for businesses across Saudi Arabia, the UAE and the Gulf.",
+      "note": "Designed & built by me"
+    },
+    "form": {
+      "nameLabel": "Your name",
+      "namePlaceholder": "Jane Doe",
+      "whatsappLabel": "WhatsApp number",
+      "whatsappPlaceholder": "+20 111 000 0000",
+      "countryLabel": "Country code",
+      "projectTypeLabel": "Project type",
+      "projectTypePlaceholder": "Select project type",
+      "budgetLabel": "Budget",
+      "messageLabel": "Project details",
+      "messagePlaceholder": "What are you building, and when do you need it live?",
+      "submitLabel": "Send inquiry",
+      "sendingLabel": "Sending…",
+      "successTitle": "Message sent",
+      "sendAnotherLabel": "Send another message",
+      "errorName": "Please tell me your name.",
+      "errorNameLong": "Name is too long.",
+      "errorWhatsapp": "Please enter a valid WhatsApp number.",
+      "errorWhatsappLong": "Please enter a valid WhatsApp number.",
+      "errorCountryCode": "Please choose your country.",
+      "errorGeneric": "Please check the highlighted fields and try again.",
+      "successMessage": "Thanks — your message is on its way. I usually reply within a few hours.",
+      "errorMessage": "Something went wrong while sending. Please use the WhatsApp button below — it reaches me directly."
+    },
+    "system": {
+      "skipToContent": "Skip to content",
+      "errorTitle": "Something broke",
+      "errorBody": "An unexpected error occurred while loading this page. Try again — if it keeps happening, reach me on WhatsApp.",
+      "errorRetry": "Try again",
+      "notFoundTitle": "This page slipped away",
+      "notFoundBody": "The link you followed doesn't exist — but the rest of the site is right where you left it.",
+      "notFoundBackHome": "Back home"
+    }
+  },
+  "stats": [
+    {
+      "id": "stat-projects",
+      "label": "Projects delivered",
+      "value": 10,
+      "suffix": "+",
+      "sort_order": 1
+    },
+    {
+      "id": "stat-years",
+      "label": "Years of experience",
+      "value": 3,
+      "suffix": "+",
+      "sort_order": 2
+    },
+    {
+      "id": "stat-custom",
+      "label": "Custom code",
+      "value": 100,
+      "suffix": "%",
+      "sort_order": 3
+    }
+  ],
+  "services": [
+    {
+      "id": "svc-design",
+      "title": "Custom Web Design",
+      "description": "Conversion-focused interfaces built around your brand — never a template. Every layout is planned to guide visitors toward one thing: contacting you or buying.",
+      "tags": [
+        "UI / UX",
+        "Landing pages",
+        "Responsive"
+      ],
+      "sort_order": 1
+    },
+    {
+      "id": "svc-react",
+      "title": "React / Next.js Apps",
+      "description": "Fast, scalable websites and web apps built with React and Next.js. Clean architecture, server rendering, SEO-ready output and smooth motion that makes your brand feel premium.",
+      "tags": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "SSR / ISR"
+      ],
+      "sort_order": 2
+    },
+    {
+      "id": "svc-backend",
+      "title": "Firebase & Supabase Backends",
+      "description": "The engine behind the interface: authentication, Postgres databases, file storage, serverless APIs and realtime updates — configured, secured and ready for real traffic.",
+      "tags": [
+        "Firebase",
+        "Supabase",
+        "Auth",
+        "Realtime"
+      ],
+      "sort_order": 3
+    },
+    {
+      "id": "svc-crm",
+      "title": "CRM & Business Systems",
+      "description": "Internal tools that replace spreadsheets and disconnected apps: lead pipelines, dashboards, admin panels and custom workflows your team actually uses every day.",
+      "tags": [
+        "CRM",
+        "Dashboards",
+        "Admin panels",
+        "Automations"
+      ],
+      "sort_order": 4
+    },
+    {
+      "id": "svc-commerce",
+      "title": "E-commerce & WordPress",
+      "description": "Online stores designed to sell — clear product pages, a smooth checkout and the integrations you need to take orders, ship and keep customers coming back.",
+      "tags": [
+        "E-commerce",
+        "WooCommerce",
+        "Payments",
+        "SEO"
+      ],
+      "sort_order": 5
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "tst-1",
+      "name": "Sarah A.",
+      "role": "Store owner",
+      "message": "Yousry rebuilt my store from scratch — front end and backend. It loads instantly, the checkout works, and my sales went up in the first week.",
+      "sort_order": 1
+    },
+    {
+      "id": "tst-2",
+      "name": "Omar K.",
+      "role": "Founder",
+      "message": "I asked for a booking platform and got a full system: the app, the database, the admin panel. Communication was fast and every deadline was met.",
+      "sort_order": 2
+    },
+    {
+      "id": "tst-3",
+      "name": "Noura S.",
+      "role": "Marketing lead",
+      "message": "He connected our CRM to the website so every lead lands straight in the pipeline. We stopped losing enquiries overnight.",
+      "sort_order": 3
+    },
+    {
+      "id": "tst-4",
+      "name": "Yousef M.",
+      "role": "Agency owner",
+      "message": "Clean handover: the code is documented, the Supabase schema is clear and the team could extend it without breaking anything.",
+      "sort_order": 4
+    },
+    {
+      "id": "tst-5",
+      "name": "Mariam H.",
+      "role": "Student",
+      "message": "The course took me from zero to my first paid project. React, then a real database behind it — practical and straight to the point.",
+      "sort_order": 5
+    }
+  ],
+  "projects": [
+    {
+      "slug": "astra-store",
+      "title": "Astra Store",
+      "tagline": "Headless e-commerce",
+      "url": "https://example.com",
+      "accent": "#10bdf5",
+      "image_path": "/projects/astra-store.webp",
+      "image_source": "local",
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Stripe"
+      ],
+      "sort_order": 1
+    },
+    {
+      "slug": "nawras-booking",
+      "title": "Nawras Booking",
+      "tagline": "Realtime reservation platform",
+      "url": "https://example.com",
+      "accent": "#4f8bfb",
+      "image_path": "/projects/nawras-booking.webp",
+      "image_source": "local",
+      "tech": [
+        "React",
+        "Firebase",
+        "Calendar"
+      ],
+      "sort_order": 2
+    },
+    {
+      "slug": "dana-clinic",
+      "title": "Dana Clinic",
+      "tagline": "Booking + patient portal",
+      "url": "https://example.com",
+      "accent": "#1b3fd6",
+      "image_path": "/projects/dana-clinic.webp",
+      "image_source": "local",
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Auth"
+      ],
+      "sort_order": 3
+    },
+    {
+      "slug": "sahab-crm",
+      "title": "Sahab CRM",
+      "tagline": "Leads, pipeline & dashboards",
+      "url": "https://example.com",
+      "accent": "#0ea5e9",
+      "image_path": "/projects/sahab-crm.webp",
+      "image_source": "local",
+      "tech": [
+        "React",
+        "Postgres",
+        "API"
+      ],
+      "sort_order": 4
+    },
+    {
+      "slug": "green-palm",
+      "title": "Green Palm",
+      "tagline": "Non-profit platform",
+      "url": "https://example.com",
+      "accent": "#7c3aed",
+      "image_path": "/projects/green-palm.webp",
+      "image_source": "local",
+      "tech": [
+        "Next.js",
+        "Firebase",
+        "i18n"
+      ],
+      "sort_order": 5
+    },
+    {
+      "slug": "riyadh-events",
+      "title": "Riyadh Events",
+      "tagline": "Ticketing & events",
+      "url": "https://example.com",
+      "accent": "#38bdf8",
+      "image_path": "/projects/riyadh-events.webp",
+      "image_source": "local",
+      "tech": [
+        "Next.js",
+        "Payments",
+        "Analytics"
+      ],
+      "sort_order": 6
+    },
+    {
+      "slug": "shorouq-books",
+      "title": "Shorouq Books",
+      "tagline": "Online bookstore",
+      "url": "https://example.com",
+      "accent": "#2563eb",
+      "image_path": "/projects/shorouq-books.webp",
+      "image_source": "local",
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "SEO"
+      ],
+      "sort_order": 7
+    }
+  ]
+}
