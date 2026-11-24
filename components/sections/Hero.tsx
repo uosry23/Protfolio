@@ -15,6 +15,8 @@ type Props = {
   whatsappNumber: string;
   ctaPrimary: string;
   ctaSecondary: string;
+  ctaResume: string;
+  resumeUrl: string | null;
 };
 
 export function Hero({
@@ -26,6 +28,8 @@ export function Hero({
   whatsappNumber,
   ctaPrimary,
   ctaSecondary,
+  ctaResume,
+  resumeUrl,
 }: Props) {
   const rootRef = useRef<HTMLElement>(null);
   const nameRef = useRef<HTMLHeadingElement>(null);
@@ -320,6 +324,17 @@ export function Hero({
               >
                 {ctaSecondary} <span aria-hidden="true">↗</span>
               </a>
+              {resumeUrl ? (
+                <a
+                  href={resumeUrl}
+                  download
+                  data-hero-cta
+                  className="hero-cta inline-block rounded-full border border-ink/30 px-7 py-3 text-sm uppercase tracking-[0.18em] text-ink transition-colors hover:border-accent-1 hover:text-accent-1"
+                  data-cursor
+                >
+                  {ctaResume} <span aria-hidden="true">↓</span>
+                </a>
+              ) : null}
             </div>
           </div>
         </div>

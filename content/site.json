@@ -2,16 +2,16 @@
   "settings": {
     "siteName": "Yousry Ahmed",
     "ownerName": "Yousry Ahmed",
-    "role": "Full-Stack Web Developer",
+    "role": "Full-Stack Web Developer · CRM & Business Systems",
     "heroEyebrow": "Web Developer",
     "heroHeadlineTop": "Full-Stack Web Development",
     "heroHeadlineBottom": "Websites & Systems That Sell.",
-    "heroIntro": "I design and build complete web products — from the interface to the database. React and Next.js on the front, Firebase and Supabase behind it, plus the APIs, CRMs and internal systems that keep a business running.",
+    "heroIntro": "I build full-stack web products and the business systems behind them — React and Next.js on the front, Supabase and Firebase behind it: CRMs, dashboards, admin panels and e-commerce that replace spreadsheets and keep a company running.",
     "aboutStatement": "I build web products that work as hard as you do.",
     "aboutBio": [
-      "I'm Yousry — a full-stack developer who builds websites and the systems behind them for businesses that want more than a pretty page.",
-      "My core is the web platform itself: fast, accessible, SEO-ready interfaces written by hand — no bloated templates, no page builders. React and Next.js on the front, Firebase and Supabase on the back, with auth, storage and realtime wired up properly.",
-      "On top of that I build the unglamorous things that actually run a company: CRMs, dashboards, admin panels and custom internal systems that replace spreadsheets and disconnected tools — so a business can move from idea to working product without the guesswork."
+      "I'm Yousry — a full-stack developer who builds websites and the systems behind them: CRMs, dashboards, admin panels and e-commerce for businesses that want more than a pretty page.",
+      "My core is the web platform itself: fast, accessible, SEO-ready interfaces written by hand — no bloated templates, no page builders. React and Next.js on the front, Supabase and Firebase on the back, with authentication, row-level security, storage and realtime wired up properly.",
+      "I model the business first — entities, roles, rules, workflows — and then build against it, so the logic lives in the database and the system keeps working when the screens change. Every project ships deployed, documented and seeded with working demo data."
     ],
     "aboutPhoto": "/images/about.webp",
     "aboutCaption": "Yousry Ahmed — Full-Stack Studio",
@@ -19,15 +19,18 @@
       "React",
       "Next.js",
       "TypeScript",
-      "Firebase",
-      "Supabase",
       "Node.js",
-      "PostgreSQL",
       "Tailwind",
+      "Supabase",
+      "Firebase",
+      "PostgreSQL",
+      "WordPress",
+      "Vercel",
       "Git"
     ],
     "whatsappNumber": "201013774006",
-    "email": "hello@yousryahmed.dev",
+    "email": "uosryahmed23@gmail.com",
+    "resumeUrl": "/resume/Yousry-Ahmed-CV.pdf",
     "consultationPrice": 50,
     "consultationDuration": "60 minutes · one-to-one call",
     "socials": [
@@ -37,15 +40,15 @@
       },
       {
         "label": "GitHub",
-        "href": "https://github.com/"
+        "href": "https://github.com/uosry23"
       },
       {
         "label": "LinkedIn",
-        "href": "https://linkedin.com/in/"
+        "href": "https://www.linkedin.com/in/yousry-ahmed-b5a8972b6/"
       },
       {
-        "label": "X",
-        "href": "https://x.com/"
+        "label": "CV",
+        "href": "/resume/Yousry-Ahmed-CV.pdf"
       }
     ],
     "navLinks": [
@@ -135,32 +138,40 @@
   },
   "copy": {
     "seo": {
-      "title": "Yousry | Web Developer",
-      "description": "Full-stack web development for businesses across Saudi Arabia, the UAE and the Gulf — React & Next.js interfaces, Firebase and Supabase backends, CRM and custom internal systems built to load fast and sell.",
+      "title": "Yousry Ahmed | Full-Stack Developer — React, Next.js & CRM Systems",
+      "description": "Full-stack developer building business websites, e-commerce stores and CRM / internal business systems — React & Next.js front ends, Supabase & Firebase back ends. Open to remote, contract and full-time work.",
       "keywords": [
         "full stack developer",
+        "full stack developer Egypt",
+        "React developer",
+        "Next.js developer",
+        "TypeScript developer",
+        "Supabase developer",
+        "Firebase developer",
+        "CRM developer",
+        "business systems developer",
+        "custom web app development",
         "web development Saudi Arabia",
         "web development UAE",
         "web development Dubai",
-        "web development Riyadh",
-        "React developer",
-        "Next.js developer",
-        "Firebase developer",
-        "Supabase developer",
-        "CRM development",
-        "custom web app development"
+        "web development Riyadh"
       ],
-      "ogTitle": "Full-Stack Web Development — Websites & Systems That Sell",
-      "ogDescription": "React & Next.js interfaces, Firebase and Supabase backends, CRM and custom business systems for companies across the Gulf.",
+      "ogTitle": "Full-Stack Web Developer — Websites, E-commerce & Business Systems",
+      "ogDescription": "React & Next.js front ends, Supabase & Firebase back ends, and the CRM, dashboard and e-commerce systems that keep a business running.",
       "knowsAbout": [
         "React",
         "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Firebase",
+        "PostgreSQL",
+        "CRM systems",
         "WordPress",
-        "PHP",
-        "E-commerce",
+        "WooCommerce",
         "Web performance"
       ],
       "areaServed": [
+        "Egypt",
         "Saudi Arabia",
         "United Arab Emirates",
         "Qatar",
@@ -176,11 +187,12 @@
     },
     "hero": {
       "ctaPrimary": "Start a project",
-      "ctaSecondary": "WhatsApp"
+      "ctaSecondary": "WhatsApp",
+      "ctaResume": "Download résumé"
     },
     "work": {
       "title": "Some of My Projects",
-      "subtitle": "Online stores, booking platforms and brand sites — designed and built from scratch to look sharp, load fast and turn visitors into customers.",
+      "subtitle": "Live stores, booking platforms and management systems — CRMs, dashboards and admin panels built with React, Next.js, Supabase and Firebase.",
       "scrollHint": "Hover to scroll"
     },
     "about": {
@@ -195,7 +207,7 @@
     },
     "services": {
       "title": "What I build",
-      "subtitle": "Custom web design and development for businesses across Saudi Arabia, the UAE and the Gulf — from a single landing page to a full online store."
+      "subtitle": "Custom web development for businesses across Egypt, Saudi Arabia, the UAE and the Gulf — from a landing page to a full CRM or e-commerce store."
     },
     "consultation": {
       "eyebrow": "(Consultation)",
@@ -222,12 +234,12 @@
         },
         {
           "label": "Availability",
-          "value": "Taking new projects"
+          "value": "Open to full-time & contract roles"
         }
       ]
     },
     "footer": {
-      "description": "Custom web design & development for businesses across Saudi Arabia, the UAE and the Gulf.",
+      "description": "Full-stack web development for businesses across Egypt, Saudi Arabia, the UAE and the Gulf — websites, e-commerce and CRM / internal business systems.",
       "note": "Designed & built by me"
     },
     "form": {
@@ -268,7 +280,7 @@
     {
       "id": "stat-projects",
       "label": "Projects delivered",
-      "value": 10,
+      "value": 15,
       "suffix": "+",
       "sort_order": 1
     },
@@ -313,11 +325,12 @@
     },
     {
       "id": "svc-backend",
-      "title": "Firebase & Supabase Backends",
-      "description": "The engine behind the interface: authentication, Postgres databases, file storage, serverless APIs and realtime updates — configured, secured and ready for real traffic.",
+      "title": "Supabase & Firebase Backends",
+      "description": "The engine behind the interface: authentication, Postgres databases, row-level security, file storage, serverless APIs and realtime updates — configured, secured and ready for real traffic.",
       "tags": [
-        "Firebase",
         "Supabase",
+        "Firebase",
+        "PostgreSQL",
         "Auth",
         "Realtime"
       ],
@@ -387,109 +400,97 @@
   ],
   "projects": [
     {
-      "slug": "astra-store",
-      "title": "Astra Store",
-      "tagline": "Headless e-commerce",
-      "url": "https://example.com",
+      "slug": "real-estate-crm",
+      "title": "Real Estate CRM",
+      "tagline": "Projects, units, leads & after-sales",
+      "url": "https://realstate-phi-two.vercel.app",
+      "code_url": "https://github.com/uosry23/realstate",
       "accent": "#10bdf5",
-      "image_path": "/projects/astra-store.webp",
+      "image_path": "/projects/real-estate-crm.webp",
       "image_source": "local",
       "tech": [
         "Next.js",
+        "TypeScript",
         "Supabase",
-        "Stripe"
+        "RLS"
       ],
       "sort_order": 1
     },
     {
-      "slug": "nawras-booking",
-      "title": "Nawras Booking",
-      "tagline": "Realtime reservation platform",
-      "url": "https://example.com",
+      "slug": "infinity-workspace",
+      "title": "Infinity Workspace",
+      "tagline": "Coworking operations & billing",
+      "url": "https://workspace-demo-sigma.vercel.app",
+      "code_url": "https://github.com/uosry23/workspace-demo",
       "accent": "#4f8bfb",
-      "image_path": "/projects/nawras-booking.webp",
+      "image_path": "/projects/infinity-workspace.webp",
       "image_source": "local",
       "tech": [
-        "React",
-        "Firebase",
-        "Calendar"
+        "Next.js",
+        "Supabase",
+        "PostgreSQL",
+        "Payments"
       ],
       "sort_order": 2
     },
     {
-      "slug": "dana-clinic",
-      "title": "Dana Clinic",
-      "tagline": "Booking + patient portal",
-      "url": "https://example.com",
+      "slug": "food-menu",
+      "title": "Food Menu",
+      "tagline": "Menu & ordering web app",
+      "url": "https://foodmenu-woad.vercel.app",
+      "code_url": "https://github.com/uosry23/foodmenu",
       "accent": "#1b3fd6",
-      "image_path": "/projects/dana-clinic.webp",
+      "image_path": "/projects/food-menu.webp",
       "image_source": "local",
       "tech": [
         "Next.js",
-        "Supabase",
-        "Auth"
+        "TypeScript"
       ],
       "sort_order": 3
     },
     {
-      "slug": "sahab-crm",
-      "title": "Sahab CRM",
-      "tagline": "Leads, pipeline & dashboards",
-      "url": "https://example.com",
+      "slug": "gloo-market",
+      "title": "Gloo Market",
+      "tagline": "Online marketplace",
+      "url": "https://gloo-market.vercel.app",
+      "code_url": "https://github.com/uosry23/Gloo_market",
       "accent": "#0ea5e9",
-      "image_path": "/projects/sahab-crm.webp",
+      "image_path": "/projects/gloo-market.webp",
       "image_source": "local",
       "tech": [
-        "React",
-        "Postgres",
-        "API"
+        "JavaScript",
+        "E-commerce"
       ],
       "sort_order": 4
     },
     {
-      "slug": "green-palm",
-      "title": "Green Palm",
-      "tagline": "Non-profit platform",
-      "url": "https://example.com",
+      "slug": "clinic-vista",
+      "title": "Clinic Vista",
+      "tagline": "Clinic management application",
+      "url": null,
+      "code_url": "https://github.com/uosry23/clinic-vista-bloom",
       "accent": "#7c3aed",
-      "image_path": "/projects/green-palm.webp",
+      "image_path": "/projects/clinic-vista.webp",
       "image_source": "local",
       "tech": [
-        "Next.js",
-        "Firebase",
-        "i18n"
+        "TypeScript"
       ],
       "sort_order": 5
     },
     {
-      "slug": "riyadh-events",
-      "title": "Riyadh Events",
-      "tagline": "Ticketing & events",
-      "url": "https://example.com",
+      "slug": "university-housing",
+      "title": "University Housing",
+      "tagline": "Student housing platform",
+      "url": null,
+      "code_url": "https://github.com/uosry23/university-housing-system",
       "accent": "#38bdf8",
-      "image_path": "/projects/riyadh-events.webp",
+      "image_path": "/projects/university-housing.webp",
       "image_source": "local",
       "tech": [
-        "Next.js",
-        "Payments",
-        "Analytics"
+        "JavaScript",
+        "Vite"
       ],
       "sort_order": 6
-    },
-    {
-      "slug": "shorouq-books",
-      "title": "Shorouq Books",
-      "tagline": "Online bookstore",
-      "url": "https://example.com",
-      "accent": "#2563eb",
-      "image_path": "/projects/shorouq-books.webp",
-      "image_source": "local",
-      "tech": [
-        "Next.js",
-        "Supabase",
-        "SEO"
-      ],
-      "sort_order": 7
     }
   ]
 }

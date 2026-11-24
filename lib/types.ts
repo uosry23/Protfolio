@@ -4,6 +4,8 @@ export type Project = {
   title: string;
   tagline: string | null;
   url: string | null;
+  /** Repository of the project — shown next to the live link when present. */
+  code_url: string | null;
   accent: string;
   image_path: string | null;
   image_source: 'local' | 'supabase';
@@ -50,6 +52,8 @@ export type SiteSettings = {
   tech: string[];
   whatsappNumber: string;
   email: string | null;
+  /** Downloadable CV (PDF) placed in `public/`. */
+  resumeUrl: string | null;
   consultationPrice: number;
   consultationDuration: string;
   socials: { label: string; href: string }[];
@@ -81,6 +85,7 @@ export type SiteCopy = {
   hero: {
     ctaPrimary: string;
     ctaSecondary: string;
+    ctaResume: string;
   };
   work: {
     title: string;

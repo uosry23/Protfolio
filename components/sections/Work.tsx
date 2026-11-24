@@ -406,16 +406,32 @@ export function Work({
                   {project.title}
                 </h3>
                 <div className="my-6 h-px w-full bg-line" />
-                {project.url ? (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-ink/30 px-6 py-3 text-xs uppercase tracking-[0.2em] text-ink transition-colors hover:border-accent-1 hover:text-accent-1"
-                    data-cursor
-                  >
-                    View live <span aria-hidden="true">↗</span>
-                  </a>
+                <div className="flex flex-wrap items-center gap-3">
+                  {project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-ink/30 px-6 py-3 text-xs uppercase tracking-[0.2em] text-ink transition-colors hover:border-accent-1 hover:text-accent-1"
+                      data-cursor
+                    >
+                      View live <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : null}
+                  {project.code_url ? (
+                    <a
+                      href={project.code_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-ink/30 px-6 py-3 text-xs uppercase tracking-[0.2em] text-ink transition-colors hover:border-accent-1 hover:text-accent-1"
+                      data-cursor
+                    >
+                      Code <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : null}
+                </div>
+                {project.tagline ? (
+                  <p className="mt-5 text-sm leading-relaxed text-muted">{project.tagline}</p>
                 ) : null}
               </div>
             ))}
@@ -483,6 +499,16 @@ export function Work({
                   className="text-[11px] uppercase tracking-[0.25em] text-ink/70 transition-colors hover:text-accent-1"
                 >
                   View live ↗
+                </a>
+              ) : null}
+              {project.code_url ? (
+                <a
+                  href={project.code_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] uppercase tracking-[0.25em] text-ink/70 transition-colors hover:text-accent-1"
+                >
+                  Code ↗
                 </a>
               ) : null}
             </div>

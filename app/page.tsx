@@ -20,7 +20,7 @@ export const dynamic = 'force-dynamic';
 export default async function HomePage() {
   const { projects, services, testimonials, stats, settings, copy } = await getSiteContent();
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yousryahmed.dev';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://protfolio-blond-five.vercel.app';
 
   const personSchema = {
     '@context': 'https://schema.org',
@@ -88,6 +88,8 @@ export default async function HomePage() {
         whatsappNumber={settings.whatsappNumber}
         ctaPrimary={copy.hero.ctaPrimary}
         ctaSecondary={copy.hero.ctaSecondary}
+        ctaResume={copy.hero.ctaResume}
+        resumeUrl={settings.resumeUrl}
       />
 
       <Work

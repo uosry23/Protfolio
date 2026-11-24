@@ -9,7 +9,7 @@ import { fontVariables } from '@/lib/fonts';
 
 import './globals.css';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yousryahmed.dev';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://protfolio-blond-five.vercel.app';
 
 /**
  * Every metadata field comes from the backend (`site_settings` → `copy.seo`),

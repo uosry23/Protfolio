@@ -20,6 +20,7 @@ export const fallbackContent: SiteContent = {
     title: p.title,
     tagline: p.tagline,
     url: p.url,
+    code_url: p.code_url ?? null,
     accent: p.accent,
     image_path: p.image_path,
     image_source: (p.image_source as Project['image_source']) ?? 'local',
