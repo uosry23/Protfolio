@@ -8,6 +8,7 @@ import { Hero } from '@/components/sections/Hero';
 import { Services } from '@/components/sections/Services';
 import { Work } from '@/components/sections/Work';
 import { getSiteContent } from '@/lib/data/content';
+import { getSiteUrl } from '@/lib/site-url';
 
 /**
  * The page is rendered per request, so every word, link and image comes from
@@ -20,7 +21,7 @@ export const dynamic = 'force-dynamic';
 export default async function HomePage() {
   const { projects, services, testimonials, stats, settings, copy } = await getSiteContent();
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://protfolio-blond-five.vercel.app';
+  const siteUrl = getSiteUrl();
 
   const personSchema = {
     '@context': 'https://schema.org',

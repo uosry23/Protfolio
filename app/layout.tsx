@@ -5,11 +5,12 @@ import { Preloader } from '@/components/ui/Preloader';
 import { SmoothScroll } from '@/components/providers/SmoothScroll';
 import { ContentProvider } from '@/lib/content-context';
 import { getSiteContent } from '@/lib/data/content';
+import { getSiteUrl } from '@/lib/site-url';
 import { fontVariables } from '@/lib/fonts';
 
 import './globals.css';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://protfolio-blond-five.vercel.app';
+const siteUrl = getSiteUrl();
 
 /**
  * Every metadata field comes from the backend (`site_settings` → `copy.seo`),
