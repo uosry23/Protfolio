@@ -86,11 +86,25 @@ export type SiteCopy = {
     ctaPrimary: string;
     ctaSecondary: string;
     ctaResume: string;
+    cursorGreeting: string;
+  };
+  header: {
+    navLabel: string;
+    cursorNavLabel: string;
+    whatsappLabel: string;
+    mobileNavLabel: string;
+    openMenuLabel: string;
+    closeMenuLabel: string;
   };
   work: {
     title: string;
     subtitle: string;
     scrollHint: string;
+    projectLabel: string;
+    liveLinkLabel: string;
+    codeLinkLabel: string;
+    openProjectLabel: string;
+    projectAltLabel: string;
   };
   about: {
     eyebrow: string;
@@ -116,11 +130,16 @@ export type SiteCopy = {
     eyebrow: string;
     title: string;
     intro: string;
+    whatsappCta: string;
+    honeypotLabel: string;
     details: { label: string; value: string }[];
   };
   footer: {
     description: string;
     note: string;
+    navLabel: string;
+    whatsappLabel: string;
+    backToTopLabel: string;
   };
   system: {
     skipToContent: string;

@@ -26,12 +26,11 @@ export type Inquiry = {
 export async function getDashboardData() {
   const supabase = createAdminClient();
 
-  const [projects, services, testimonials, stats, settings, copy, inquiries] = await Promise.all([
+  const [projects, services, testimonials, stats, settings, inquiries] = await Promise.all([
     supabase.from('projects').select('*').order('sort_order', { ascending: true }),
     supabase.from('services').select('*').order('sort_order', { ascending: true }),
     supabase.from('testimonials').select('*').order('sort_order', { ascending: true }),
     supabase.from('site_stats').select('*').order('sort_order', { ascending: true }),
-    supabase.from('site_settings').select('*'),
     supabase.from('site_settings').select('*'),
     supabase
       .from('inquiries')
@@ -41,7 +40,6 @@ export async function getDashboardData() {
   ]);
 
   const settingsRows = (settings.data ?? []) as unknown as { key: string; value: unknown }[];
-  const copyRows = (copy.data ?? []) as unknown as { key: string; value: unknown }[];
 
   const firstError = [projects, services, testimonials, stats, settings, inquiries].find(
     (result) => result.error,
@@ -57,7 +55,7 @@ export async function getDashboardData() {
     testimonials: (testimonials.data ?? []) as unknown as (Testimonial & { published: boolean })[],
     stats: (stats.data ?? []) as unknown as (Stat & { published: boolean })[],
     settings: (settingsRows.find((row) => row.key === 'site')?.value ?? {}) as SiteSettings,
-    copy: (copyRows.find((row) => row.key === 'copy')?.value ?? {}) as SiteCopy,
+    copy: (settingsRows.find((row) => row.key === 'copy')?.value ?? {}) as SiteCopy,
     inquiries: (inquiries.data ?? []) as unknown as Inquiry[],
     error: firstError?.message ?? null,
   };

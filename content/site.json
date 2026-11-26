@@ -188,12 +188,26 @@
     "hero": {
       "ctaPrimary": "Start a project",
       "ctaSecondary": "WhatsApp",
-      "ctaResume": "Download résumé"
+      "ctaResume": "Download résumé",
+      "cursorGreeting": "Hi"
+    },
+    "header": {
+      "navLabel": "Primary",
+      "cursorNavLabel": "Go",
+      "whatsappLabel": "WhatsApp",
+      "mobileNavLabel": "Mobile",
+      "openMenuLabel": "Open menu",
+      "closeMenuLabel": "Close menu"
     },
     "work": {
       "title": "Some of My Projects",
       "subtitle": "Live stores, booking platforms and management systems — CRMs, dashboards and admin panels built with React, Next.js, Supabase and Firebase.",
-      "scrollHint": "Hover to scroll"
+      "scrollHint": "Hover to scroll",
+      "projectLabel": "Project",
+      "liveLinkLabel": "View live",
+      "codeLinkLabel": "Code",
+      "openProjectLabel": "Open",
+      "projectAltLabel": "project"
     },
     "about": {
       "eyebrow": "(About)"
@@ -223,6 +237,8 @@
       "eyebrow": "(Contact)",
       "title": "Let's build something that sells",
       "intro": "Tell me about your project and I'll get back to you on WhatsApp. Prefer to talk right away?",
+      "whatsappCta": "Chat on WhatsApp",
+      "honeypotLabel": "Company",
       "details": [
         {
           "label": "Based in",
@@ -240,7 +256,10 @@
     },
     "footer": {
       "description": "Full-stack web development for businesses across Egypt, Saudi Arabia, the UAE and the Gulf — websites, e-commerce and CRM / internal business systems.",
-      "note": "Designed & built by me"
+      "note": "Designed & built by me",
+      "navLabel": "Footer",
+      "whatsappLabel": "WhatsApp",
+      "backToTopLabel": "Back to top"
     },
     "form": {
       "nameLabel": "Your name",

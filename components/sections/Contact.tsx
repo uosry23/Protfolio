@@ -150,7 +150,7 @@ export function Contact({
               data-cursor
             >
               <span className="size-1.5 rounded-full bg-accent-1" aria-hidden="true" />
-              Chat on WhatsApp <span aria-hidden="true">↗</span>
+              {copy.whatsappCta} <span aria-hidden="true">↗</span>
             </a>
 
             {email ? (
@@ -336,7 +336,7 @@ export function Contact({
 
                   {/* Honeypot — invisible to humans, tempting for bots. */}
                   <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
-                    <label htmlFor={`${uid}-company`}>Company</label>
+                    <label htmlFor={`${uid}-company`}>{copy.honeypotLabel}</label>
                     <input id={`${uid}-company`} name="company" type="text" tabIndex={-1} autoComplete="off" />
                   </div>
 

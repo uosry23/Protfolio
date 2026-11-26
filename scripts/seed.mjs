@@ -65,11 +65,6 @@ async function upsert(table, rows, conflict) {
 }
 
 try {
-  /* `code_url` is an optional column: older databases do not have it yet, so
-     it is only pushed when the column really exists. */
-  const { error: codeUrlProbeError } = await supabase.from('projects').select('code_url').limit(1);
-  const hasCodeUrl = !codeUrlProbeError;
-
   await upsert(
     'projects',
     content.projects.map((project, index) => ({
@@ -77,7 +72,7 @@ try {
       title: project.title,
       tagline: project.tagline,
       url: project.url,
-      ...(hasCodeUrl ? { code_url: project.code_url ?? null } : {}),
+      code_url: project.code_url ?? null,
       accent: project.accent,
       image_path: project.image_path,
       image_source: project.image_source,

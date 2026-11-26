@@ -78,6 +78,7 @@ export default async function HomePage() {
         name={settings.ownerName}
         links={settings.navLinks}
         whatsappNumber={settings.whatsappNumber}
+        labels={copy.header}
       />
 
       <Hero
@@ -90,6 +91,7 @@ export default async function HomePage() {
         ctaPrimary={copy.hero.ctaPrimary}
         ctaSecondary={copy.hero.ctaSecondary}
         ctaResume={copy.hero.ctaResume}
+        cursorGreeting={copy.hero.cursorGreeting}
         resumeUrl={settings.resumeUrl}
       />
 
@@ -98,6 +100,11 @@ export default async function HomePage() {
         title={copy.work.title}
         subtitle={copy.work.subtitle}
         scrollHint={copy.work.scrollHint}
+        projectLabel={copy.work.projectLabel}
+        liveLinkLabel={copy.work.liveLinkLabel}
+        codeLinkLabel={copy.work.codeLinkLabel}
+        openProjectLabel={copy.work.openProjectLabel}
+        projectAltLabel={copy.work.projectAltLabel}
       />
 
       <About
@@ -155,6 +162,7 @@ export default async function HomePage() {
         whatsappNumber={settings.whatsappNumber}
         year={new Date().getFullYear()}
         note={copy.footer.note}
+        labels={copy.footer}
       />
     </>
   );

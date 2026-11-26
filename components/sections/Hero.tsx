@@ -16,6 +16,7 @@ type Props = {
   ctaPrimary: string;
   ctaSecondary: string;
   ctaResume: string;
+  cursorGreeting: string;
   resumeUrl: string | null;
 };
 
@@ -29,6 +30,7 @@ export function Hero({
   ctaPrimary,
   ctaSecondary,
   ctaResume,
+  cursorGreeting,
   resumeUrl,
 }: Props) {
   const rootRef = useRef<HTMLElement>(null);
@@ -239,7 +241,7 @@ export function Hero({
       <div
         data-hero-logo-wrap
         className="hero-logo-wrap mt-6 flex justify-center [perspective:900px]"
-        data-cursor-label="Hi"
+        data-cursor-label={cursorGreeting}
       >
         <div
           data-hero-logo-tilt

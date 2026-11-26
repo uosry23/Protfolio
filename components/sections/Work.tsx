@@ -19,11 +19,21 @@ export function Work({
   title,
   subtitle,
   scrollHint,
+  projectLabel,
+  liveLinkLabel,
+  codeLinkLabel,
+  openProjectLabel,
+  projectAltLabel,
 }: {
   projects: Project[];
   title: string;
   subtitle: string;
   scrollHint: string;
+  projectLabel: string;
+  liveLinkLabel: string;
+  codeLinkLabel: string;
+  openProjectLabel: string;
+  projectAltLabel: string;
 }) {
   const rootRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -334,7 +344,7 @@ export function Work({
                 href={project.url ?? '#work'}
                 target={project.url ? '_blank' : undefined}
                 rel={project.url ? 'noopener noreferrer' : undefined}
-                aria-label={`Open ${project.title}`}
+                aria-label={`${openProjectLabel} ${project.title}`}
                 className="block w-full overflow-hidden rounded-md border border-line"
                 data-cursor
               >
@@ -371,7 +381,7 @@ export function Work({
               >
                 <Image
                   src={project.image_path ?? '/projects/placeholder.webp'}
-                  alt={`${project.title} — ${project.tagline ?? 'project'}`}
+                  alt={`${project.title} — ${project.tagline ?? projectAltLabel}`}
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"
                   className="object-cover object-top"
@@ -400,7 +410,7 @@ export function Work({
                 className="work-info absolute inset-x-0 top-0 -translate-y-1/2 rounded-2xl border border-line bg-bg-deep/55 p-7 backdrop-blur-md"
               >
                 <p className="text-[11px] uppercase tracking-[0.3em] text-muted">
-                  Project {String(index + 1).padStart(2, '0')}
+                  {projectLabel} {String(index + 1).padStart(2, '0')}
                 </p>
                 <h3 className="mt-4 break-words font-display text-[clamp(2rem,3.4vw,3.4rem)] uppercase leading-[0.9] text-ink">
                   {project.title}
@@ -415,7 +425,7 @@ export function Work({
                       className="inline-flex items-center gap-2 rounded-full border border-ink/30 px-6 py-3 text-xs uppercase tracking-[0.2em] text-ink transition-colors hover:border-accent-1 hover:text-accent-1"
                       data-cursor
                     >
-                      View live <span aria-hidden="true">↗</span>
+                      {liveLinkLabel} <span aria-hidden="true">↗</span>
                     </a>
                   ) : null}
                   {project.code_url ? (
@@ -426,7 +436,7 @@ export function Work({
                       className="inline-flex items-center gap-2 rounded-full border border-ink/30 px-6 py-3 text-xs uppercase tracking-[0.2em] text-ink transition-colors hover:border-accent-1 hover:text-accent-1"
                       data-cursor
                     >
-                      Code <span aria-hidden="true">↗</span>
+                      {codeLinkLabel} <span aria-hidden="true">↗</span>
                     </a>
                   ) : null}
                 </div>
@@ -476,7 +486,7 @@ export function Work({
               <Image
                 data-mobile-image
                 src={project.image_path ?? '/projects/placeholder.webp'}
-                alt={`${project.title} — ${project.tagline ?? 'project'}`}
+                alt={`${project.title} — ${project.tagline ?? projectAltLabel}`}
                 fill
                 sizes="100vw"
                 className="object-cover object-top"
@@ -486,7 +496,7 @@ export function Work({
             <div className="mt-4 flex items-end justify-between gap-4">
               <div>
                 <p className="text-[11px] uppercase tracking-[0.25em] text-accent-1">
-                  Project {String(index + 1).padStart(2, '0')}
+                  {projectLabel} {String(index + 1).padStart(2, '0')}
                 </p>
                 <h3 className="mt-1 font-display text-2xl uppercase text-ink">{project.title}</h3>
                 {project.tagline ? <p className="mt-1 text-sm text-muted">{project.tagline}</p> : null}
@@ -498,7 +508,7 @@ export function Work({
                   rel="noopener noreferrer"
                   className="text-[11px] uppercase tracking-[0.25em] text-ink/70 transition-colors hover:text-accent-1"
                 >
-                  View live ↗
+                  {liveLinkLabel} ↗
                 </a>
               ) : null}
               {project.code_url ? (
@@ -508,7 +518,7 @@ export function Work({
                   rel="noopener noreferrer"
                   className="text-[11px] uppercase tracking-[0.25em] text-ink/70 transition-colors hover:text-accent-1"
                 >
-                  Code ↗
+                  {codeLinkLabel} ↗
                 </a>
               ) : null}
             </div>

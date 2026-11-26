@@ -12,6 +12,7 @@ create table if not exists public.projects (
   title        text not null,
   tagline      text,
   url          text,
+  code_url     text,
   accent       text not null default '#35e4a3',
   image_path   text,
   image_source text not null default 'local' check (image_source in ('local', 'supabase')),
@@ -55,7 +56,7 @@ create table if not exists public.site_stats (
   published  boolean not null default true
 );
 
--- ─── Key/value settings (one row: key = 'site') ─────────────────────
+-- ─── Key/value settings ('site' and 'copy' are separate rows) ─────────
 create table if not exists public.site_settings (
   key        text primary key,
   value      jsonb not null,
@@ -89,6 +90,8 @@ alter table public.testimonials alter column id type text using id::text;
 alter table public.site_stats   alter column id drop default;
 alter table public.site_stats   alter column id type text using id::text;
 
+alter table public.projects add column if not exists code_url text;
+
 -- ═══════════════════════════════════════════════════════════════════
 --  Row Level Security
 -- ═══════════════════════════════════════════════════════════════════
@@ -119,6 +122,12 @@ create policy "stats are public" on public.site_stats
 drop policy if exists "settings are public" on public.site_settings;
 create policy "settings are public" on public.site_settings
   for select to anon, authenticated using (true);
+
+-- RLS policies filter rows, but table privileges are required before those
+-- policies are evaluated. The public site uses the anon key for these reads.
+grant usage on schema public to anon, authenticated;
+grant select on public.projects, public.services, public.testimonials,
+  public.site_stats, public.site_settings to anon, authenticated;
 
 -- Inquiries and dashboard writes happen on the server with the service-role key.
 -- The public API cannot read or write inquiries.

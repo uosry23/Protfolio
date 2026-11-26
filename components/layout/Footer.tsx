@@ -11,6 +11,7 @@ export function Footer({
   whatsappNumber,
   year,
   note,
+  labels,
 }: {
   name: string;
   description: string;
@@ -20,6 +21,7 @@ export function Footer({
   /** Rendered on the server so the markup never mismatches at midnight. */
   year: number;
   note: string;
+  labels: { navLabel: string; whatsappLabel: string; backToTopLabel: string };
 }) {
   return (
     <footer className="relative overflow-hidden border-t border-line px-4 pb-6 pt-16 md:px-6 md:pt-20">
@@ -37,7 +39,7 @@ export function Footer({
             <p className="max-w-sm text-sm leading-relaxed text-ink/80">{description}</p>
           </div>
 
-          <nav aria-label="Footer">
+          <nav aria-label={labels.navLabel}>
             <ul className="flex flex-col gap-3">
               {links.map((link) => (
                 <li key={link.href}>
@@ -60,14 +62,14 @@ export function Footer({
               className="text-sm uppercase tracking-[0.18em] text-accent-1 transition-colors hover:text-ink"
               data-cursor
             >
-              WhatsApp <span aria-hidden="true">↗</span>
+              {labels.whatsappLabel} <span aria-hidden="true">↗</span>
             </a>
             <a
               href="#top"
               className="text-sm uppercase tracking-[0.18em] text-ink/85 transition-colors hover:text-accent-1"
-              aria-label="Back to top"
+              aria-label={labels.backToTopLabel}
             >
-              Back to top ↑
+              {labels.backToTopLabel} ↑
             </a>
           </div>
         </div>

@@ -13,10 +13,19 @@ export function Header({
   name,
   links,
   whatsappNumber,
+  labels,
 }: {
   name: string;
   links: NavLink[];
   whatsappNumber: string;
+  labels: {
+    navLabel: string;
+    cursorNavLabel: string;
+    whatsappLabel: string;
+    mobileNavLabel: string;
+    openMenuLabel: string;
+    closeMenuLabel: string;
+  };
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -174,13 +183,13 @@ export function Header({
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-end gap-8 md:flex">
+          <nav aria-label={labels.navLabel} className="hidden items-end gap-8 md:flex">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 className="group flex items-center gap-2 border-b border-line pb-3 text-sm uppercase tracking-[0.18em] text-ink/80 transition-colors hover:text-accent-1"
-                data-cursor-label="Go"
+                data-cursor-label={labels.cursorNavLabel}
               >
                 <span
                   aria-hidden="true"
@@ -200,7 +209,7 @@ export function Header({
               data-cursor
             >
               <span data-nav-icon className="block">
-                WhatsApp <span aria-hidden="true">↗</span>
+                {labels.whatsappLabel} <span aria-hidden="true">↗</span>
               </span>
             </a>
 
@@ -211,7 +220,9 @@ export function Header({
               aria-controls="mobile-menu"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink md:hidden"
             >
-              <span className="sr-only">{menuOpen ? 'Close menu' : 'Open menu'}</span>
+              <span className="sr-only">
+                {menuOpen ? labels.closeMenuLabel : labels.openMenuLabel}
+              </span>
               <span aria-hidden="true" className="flex flex-col items-center gap-[5px]">
                 <span
                   className={cn(
@@ -238,7 +249,7 @@ export function Header({
         className="fixed inset-0 z-[55] bg-bg-deep px-6 pt-28 md:hidden"
         style={{ clipPath: 'circle(0% at calc(100% - 2.5rem) 2rem)' }}
       >
-        <nav aria-label="Mobile" className="flex flex-col gap-2">
+        <nav aria-label={labels.mobileNavLabel} className="flex flex-col gap-2">
           {links.map((link) => (
             <a
               key={link.href}

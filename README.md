@@ -118,6 +118,8 @@ It has two halves:
 | `copy` | `site_settings` → `key = 'copy'` | **Every word the UI renders** — headings, paragraphs, CTA labels, form labels and validation messages, SEO metadata |
 | `projects` / `services` / `testimonials` / `stats` | their own tables | The portfolio content |
 
+After updating an existing database, run `npm run migrate:copy-labels` once to add the database-backed labels used by the header and project cards. This preserves any existing copy values. Also run `supabase/migrations/20261127_anon_read_grants.sql` in the Supabase SQL Editor to grant the public `anon` role read access to published content; RLS policies do not grant table privileges by themselves.
+
 Runtime reads go through [`lib/data/content.ts`](lib/data/content.ts), which merges
 the Supabase rows over the bundled fallback. To change anything:
 

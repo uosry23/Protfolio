@@ -10,6 +10,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "seed": "node scripts/seed.mjs",
+    "migrate:copy-labels": "node scripts/migrate-copy-labels.mjs",
     "gen:images": "node scripts/generate-placeholders.mjs"
   },
   "dependencies": {

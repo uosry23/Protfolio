@@ -118,23 +118,6 @@ export function About({
             value: target,
             duration: 2,
             ease: 'power3.out',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 90%',
-              once: true,
-              onEnter: () => {
-                if (window.scrollY > 0 && element.getBoundingClientRect().top < window.innerHeight * 0.9) {
-                  gsap.to(state, {
-                    value: target,
-                    duration: 2,
-                    ease: 'power3.out',
-                    onUpdate: () => {
-                      element.textContent = `${Math.round(state.value)}${suffix}`;
-                    },
-                  });
-                }
-              },
-            },
             onUpdate: () => {
               element.textContent = `${Math.round(state.value)}${suffix}`;
             },

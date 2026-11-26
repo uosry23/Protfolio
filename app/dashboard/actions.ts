@@ -154,6 +154,7 @@ const projectSchema = z.object({
   title: requiredText('The title is required.'),
   tagline: z.string().trim().nullish(),
   url: z.string().trim().nullish(),
+  code_url: z.string().trim().nullish(),
   accent: z.preprocess(
     (value) => (typeof value === 'string' && value.trim() ? value : '#35e4a3'),
     z.string().trim(),

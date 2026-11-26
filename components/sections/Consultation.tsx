@@ -96,7 +96,6 @@ export function Consultation({
           value: price,
           duration: 1.4,
           ease: 'power3.out',
-          scrollTrigger: { trigger: '[data-cs-price]', start: 'top 90%' },
           onUpdate: () => {
             if (priceRef.current) priceRef.current.textContent = String(Math.round(state.value));
           },
