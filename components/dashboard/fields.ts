@@ -43,20 +43,19 @@ export const RECORD_FIELDS: Record<EditableTable, FieldDef[]> = {
       help: 'Leave empty if the project is not public yet.',
     },
     {
-      name: 'code_url',
-      label: 'Code URL',
-      type: 'text',
-      placeholder: 'https://github.com/you/project',
-      help: 'Repository link. Leave empty to hide it.',
-    },
-    {
       name: 'accent',
       label: 'Accent colour',
       type: 'text',
       placeholder: '#35e4a3',
       help: 'Any CSS colour — it tints the card and the progress bar.',
     },
-    { name: 'image_path', label: 'Cover image', type: 'image' },
+    {
+      name: 'image_path',
+      label: 'Image URL',
+      type: 'text',
+      placeholder: 'https://example.com/project-cover.webp',
+      help: 'Paste a direct image URL, or upload a file below. Saved to the image_path column.',
+    },
     {
       name: 'tech',
       label: 'Tech stack',

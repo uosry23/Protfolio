@@ -102,7 +102,6 @@ export default async function HomePage() {
         scrollHint={copy.work.scrollHint}
         projectLabel={copy.work.projectLabel}
         liveLinkLabel={copy.work.liveLinkLabel}
-        codeLinkLabel={copy.work.codeLinkLabel}
         openProjectLabel={copy.work.openProjectLabel}
         projectAltLabel={copy.work.projectAltLabel}
       />

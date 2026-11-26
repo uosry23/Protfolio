@@ -72,7 +72,6 @@ try {
       title: project.title,
       tagline: project.tagline,
       url: project.url,
-      code_url: project.code_url ?? null,
       accent: project.accent,
       image_path: project.image_path,
       image_source: project.image_source,

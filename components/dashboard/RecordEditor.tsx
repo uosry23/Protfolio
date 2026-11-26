@@ -112,7 +112,22 @@ export function RecordEditor({ table, mode, record, fields, extra, onDone }: Pro
                 {field.label}
               </label>
 
-              {field.type === 'image' ? (
+              {field.name === 'image_path' ? (
+                <>
+                  <input
+                    id={`${table}-${field.name}`}
+                    type="url"
+                    placeholder={field.placeholder}
+                    value={String(values[field.name] ?? '')}
+                    onChange={(event) => set(field.name, event.target.value)}
+                    className={inputClass}
+                  />
+                  <ImageUploader
+                    value={String(values[field.name] ?? '')}
+                    onChange={(url) => set(field.name, url)}
+                  />
+                </>
+              ) : field.type === 'image' ? (
                 <ImageUploader
                   value={String(values[field.name] ?? '')}
                   onChange={(url) => set(field.name, url)}

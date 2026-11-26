@@ -21,7 +21,6 @@ export function Work({
   scrollHint,
   projectLabel,
   liveLinkLabel,
-  codeLinkLabel,
   openProjectLabel,
   projectAltLabel,
 }: {
@@ -31,7 +30,6 @@ export function Work({
   scrollHint: string;
   projectLabel: string;
   liveLinkLabel: string;
-  codeLinkLabel: string;
   openProjectLabel: string;
   projectAltLabel: string;
 }) {
@@ -356,6 +354,7 @@ export function Work({
                   height={444}
                   className="aspect-[0.72] w-full object-cover object-top"
                   loading={index === 0 ? 'eager' : 'lazy'}
+                  unoptimized
                 />
               </a>
             </li>
@@ -384,8 +383,9 @@ export function Work({
                   alt={`${project.title} — ${project.tagline ?? projectAltLabel}`}
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"
-                  className="object-cover object-top"
+                  className="object-contain object-center"
                   loading={index === 0 ? 'eager' : 'lazy'}
+                  unoptimized
                 />
                 <span
                   aria-hidden="true"
@@ -426,17 +426,6 @@ export function Work({
                       data-cursor
                     >
                       {liveLinkLabel} <span aria-hidden="true">↗</span>
-                    </a>
-                  ) : null}
-                  {project.code_url ? (
-                    <a
-                      href={project.code_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-ink/30 px-6 py-3 text-xs uppercase tracking-[0.2em] text-ink transition-colors hover:border-accent-1 hover:text-accent-1"
-                      data-cursor
-                    >
-                      {codeLinkLabel} <span aria-hidden="true">↗</span>
                     </a>
                   ) : null}
                 </div>
@@ -489,8 +478,9 @@ export function Work({
                 alt={`${project.title} — ${project.tagline ?? projectAltLabel}`}
                 fill
                 sizes="100vw"
-                className="object-cover object-top"
+                className="object-contain object-center"
                 loading={index === 0 ? 'eager' : 'lazy'}
+                unoptimized
               />
             </div>
             <div className="mt-4 flex items-end justify-between gap-4">
@@ -509,16 +499,6 @@ export function Work({
                   className="text-[11px] uppercase tracking-[0.25em] text-ink/70 transition-colors hover:text-accent-1"
                 >
                   {liveLinkLabel} ↗
-                </a>
-              ) : null}
-              {project.code_url ? (
-                <a
-                  href={project.code_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[11px] uppercase tracking-[0.25em] text-ink/70 transition-colors hover:text-accent-1"
-                >
-                  {codeLinkLabel} ↗
                 </a>
               ) : null}
             </div>

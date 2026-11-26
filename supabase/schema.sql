@@ -12,7 +12,6 @@ create table if not exists public.projects (
   title        text not null,
   tagline      text,
   url          text,
-  code_url     text,
   accent       text not null default '#35e4a3',
   image_path   text,
   image_source text not null default 'local' check (image_source in ('local', 'supabase')),
@@ -90,7 +89,6 @@ alter table public.testimonials alter column id type text using id::text;
 alter table public.site_stats   alter column id drop default;
 alter table public.site_stats   alter column id type text using id::text;
 
-alter table public.projects add column if not exists code_url text;
 
 -- ═══════════════════════════════════════════════════════════════════
 --  Row Level Security

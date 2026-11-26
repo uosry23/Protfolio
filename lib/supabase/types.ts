@@ -10,7 +10,6 @@ export type Database = {
           title: string;
           tagline: string | null;
           url: string | null;
-          code_url: string | null;
           accent: string;
           image_path: string | null;
           image_source: 'local' | 'supabase';
@@ -25,7 +24,6 @@ export type Database = {
           title: string;
           tagline?: string | null;
           url?: string | null;
-          code_url?: string | null;
           accent?: string;
           image_path?: string | null;
           image_source?: 'local' | 'supabase';
